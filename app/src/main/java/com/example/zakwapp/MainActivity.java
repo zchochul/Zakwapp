@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        System.out.println("d");
         button_feeding = findViewById(R.id.Feed_button);
         button_is_dead = findViewById(R.id.Is_Dead_Button);
         button_movies = findViewById(R.id.Movies_Button);
@@ -29,5 +28,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intentFeed);
             }
         });
+
     }
 }
