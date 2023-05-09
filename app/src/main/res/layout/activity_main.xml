@@ -14,36 +14,36 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/Feed_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="Eat!" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/Is_Dead_Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Button" />
+            android:text="Dead?" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/Movies_Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button" />
+            android:text="Watch!" />
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/Calendar_Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button" />
+            android:text="Calendar" />
 
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/Zakwas_View_Picture"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
