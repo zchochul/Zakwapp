@@ -16,6 +16,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -31,6 +32,9 @@ public class Feeding extends AppCompatActivity {
 
     DBHelper mydb;
     ArrayList<String> logs;
+    SimpleDateFormat sdf;
+    Calendar c;
+    String date;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,19 +44,23 @@ public class Feeding extends AppCompatActivity {
         flourEdit = findViewById(R.id.flourEdit);
         waterEdit = findViewById(R.id.waterEdit);
         doneButton = findViewById(R.id.doneFeedingButton);
-       // test = findViewById(R.id.TestoweTextView);
+        test = findViewById(R.id.TestoweTextView);
 
         mydb = new DBHelper(this);
+        sdf = new SimpleDateFormat("dd/MM/yyyy");
 
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Date currentTime = Calendar.getInstance().getTime();
-                mydb.insertLog("data",waterEdit.getText().toString(),flourEdit.getText().toString());
 
-                //logs = mydb.getAllLogs();
 
-                /*String tmp = "";
+                c = Calendar.getInstance();
+                date = sdf.format(c.getTime());
+                mydb.insertLog(date,waterEdit.getText().toString(),flourEdit.getText().toString());
+
+                /*logs = mydb.getAllLogs();
+
+                String tmp = "";
                 for(String g : logs ){
                     tmp = tmp.concat(g + "\n");
 
