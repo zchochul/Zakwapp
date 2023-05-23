@@ -10,13 +10,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    Button button_feeding;
-    Button button_is_dead;
-    Button button_movies;
-    Button button_calendar;
+    ImageButton button_feeding;
+    ImageButton button_is_dead;
+    ImageButton button_movies;
+    ImageButton button_calendar;
     boolean isAlive = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

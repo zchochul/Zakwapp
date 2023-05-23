@@ -13,32 +13,57 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <Button
+        <ImageButton
             android:id="@+id/Feed_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="108dp"
+            android:layout_height="108dp"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:contentDescription="EAT"
+            android:scaleType="centerCrop"
+            android:src="@drawable/eating_official"
             android:text="Eat!" />
 
-        <Button
+
+        <ImageButton
             android:id="@+id/Is_Dead_Button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="108dp"
+            android:layout_height="108dp"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:contentDescription="DEAD"
+            android:scaleType="centerCrop"
+            android:src="@drawable/death_official"
             android:gravity="center"
             android:text="Dead?" />
 
-        <Button
+        <ImageButton
             android:id="@+id/Movies_Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="108dp"
+            android:layout_height="108dp"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:scaleType="centerCrop"
+            android:contentDescription="MOVIE"
+            android:src="@drawable/movies_official"
             android:layout_weight="1"
             android:text="Watch!" />
 
-        <Button
+        <ImageButton
             android:id="@+id/Calendar_Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="108dp"
+            android:layout_height="108dp"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:contentDescription="TIME"
+            android:scaleType="centerCrop"
+            android:src="@drawable/calendar_official"
             android:layout_weight="1"
             android:text="Calendar" />
+        
+
+
+
 
     </LinearLayout>
 
