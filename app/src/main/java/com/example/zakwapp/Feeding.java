@@ -72,6 +72,7 @@ public class Feeding extends AppCompatActivity {
                 startActivity(intentMain);
             }
         });
+        //return null;
     }
 
     public class DBHelper extends SQLiteOpenHelper {
