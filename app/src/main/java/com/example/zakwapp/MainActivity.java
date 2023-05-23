@@ -48,34 +48,38 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        button_movies.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            Intent intentFeed = new Intent(getBaseContext(),Video.class);
+            startActivity(intentFeed);
+            }
+        });
+
 
     }
 
+    public Dialog onCreateDialogDead() {
+        // Use the Builder class for convenient dialog construction
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("How to check, if your starter is dead? \n" +
+                        "- it smells weirdly\n" +
+                        "- it has a mold on it\n" +
+                        "- you haven't feed it in a while\n" +
+                        "Is your starter dead then??")
+                .setPositiveButton("Alive", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        Toast.makeText(getBaseContext(), "Great to hear!", Toast.LENGTH_LONG).show();
 
-   //public class DialogDead extends DialogFragment {
-        //@Override
-        public Dialog onCreateDialogDead() {
-            // Use the Builder class for convenient dialog construction
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setMessage("How to check, if your starter is dead? \n" +
-                            "- it smells weirdly\n" +
-                            "- it has a mold on it\n" +
-                            "- you haven't feed it in a while\n" +
-                            "Is your starter dead then??")
-                    .setPositiveButton("Alive", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id){
-                            Toast.makeText(getBaseContext(), "Great to hear!", Toast.LENGTH_LONG).show();
-
-                        }
-                    })
-                    .setNegativeButton("Dead", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id) {
-                            Toast.makeText(getBaseContext(), "Oh no!", Toast.LENGTH_LONG).show();
-                            isAlive = false;
-                        }
-                    });
-            // Create the AlertDialog object and return it
-            return builder.create();
-        }
-    //}
+                    }
+                })
+                .setNegativeButton("Dead", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        Toast.makeText(getBaseContext(), "Oh no!", Toast.LENGTH_LONG).show();
+                        isAlive = false;
+                    }
+                });
+        // Create the AlertDialog object and return it
+        return builder.create();
+    }
 }
