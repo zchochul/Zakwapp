@@ -75,7 +75,7 @@ public class Feeding extends AppCompatActivity {
         //return null;
     }
 
-    public class DBHelper extends SQLiteOpenHelper {
+    public static class DBHelper extends SQLiteOpenHelper {
         public static final String DATABASE_NAME = "MyDBName.db";
         public static final String LOGS_TABLE_NAME = "logs";
         public static final String LOGS_COLUMN_ID = "id";

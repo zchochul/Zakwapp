@@ -31,6 +31,14 @@ public class MainActivity extends AppCompatActivity {
         button_calendar = findViewById(R.id.Calendar_Button);
         zakwas_mood = findViewById(R.id.MoodButton);
 
+        button_calendar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentCalendar = new Intent(getBaseContext(), CalendarLite.class);
+                startActivity(intentCalendar);
+            }
+        });
+
         button_feeding.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

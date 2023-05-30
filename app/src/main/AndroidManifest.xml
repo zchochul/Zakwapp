@@ -12,7 +12,13 @@
         android:theme="@style/Theme.Zakwapp"
         tools:targetApi="31">
         <activity
+            android:name=".CalendarLite"
+            android:exported="false" />
+        <activity
             android:name=".Video"
+            android:exported="false" />
+        <activity
+            android:name=".Calendar"
             android:exported="false" />
         <activity
             android:name=".Feeding"
