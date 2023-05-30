@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     ImageButton button_is_dead;
     ImageButton button_movies;
     ImageButton button_calendar;
+
+    ImageButton zakwas_mood;
     boolean isAlive = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         button_is_dead = findViewById(R.id.Is_Dead_Button);
         button_movies = findViewById(R.id.Movies_Button);
         button_calendar = findViewById(R.id.Calendar_Button);
+        zakwas_mood = findViewById(R.id.MoodButton);
 
         button_feeding.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
 
 
 
@@ -69,12 +74,14 @@ public class MainActivity extends AppCompatActivity {
                         "Is your starter dead then??")
                 .setPositiveButton("Alive", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
+                        zakwas_mood.setImageResource(R.drawable.szczesliwy);
                         Toast.makeText(getBaseContext(), "Great to hear!", Toast.LENGTH_LONG).show();
 
                     }
                 })
                 .setNegativeButton("Dead", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
+                        zakwas_mood.setImageResource(R.drawable.smutny);
                         Toast.makeText(getBaseContext(), "Oh no!", Toast.LENGTH_LONG).show();
                         isAlive = false;
                     }

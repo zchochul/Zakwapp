@@ -67,10 +67,23 @@
 
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/Zakwas_View_Picture"
+    <ImageButton
+        android:id="@+id/MoodButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        android:scaleType="centerCrop"
+        android:contentDescription="mud"
+        android:text="nastruj"
+        app:srcCompat="@drawable/szczesliwy" />
+
+    <!--    <ImageView-->
+<!--        android:id="@+id/Zakwas_View_Picture"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:contentDescription="TIME"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:src="@drawable/Smutny"-->
+<!--        android:layout_weight="1"-->
+<!--        android:text="Calendar" />-->
 
 </LinearLayout>
